@@ -1,6 +1,6 @@
 # IMDb-Movie-Search
 
-= Set Up the Environment
+#= Set Up the Environment
 Step 1: Install IMDbPY: You can install IMDbPY via pip. (I used "bash" as Scripting)
 pip install IMDbPY
 
