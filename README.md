@@ -11,11 +11,11 @@ pip install pandas numpy boto3
 
 # Step 3: Set up a GitHub repository on GitHub, and clone the repository to your local machine.
 
-git clone https://github.com/jibinjohny93/IMDb-Movie-Search.git ----> clone the repository
+# git clone https://github.com/jibinjohny93/IMDb-Movie-Search.git ----> clone the repository
 
-git add .\python-code.py                    ---> add the code to staging area
-git commit -m "imported the imdb library"   ---> commit the code
-git push                                    ---> push the code
-git status                                  ---> check the changes to commit
+# git add .\python-code.py                    ---> add the code to staging area
+# git commit -m "imported the imdb library"   ---> commit the code
+# git push                                    ---> push the code
+# git status                                  ---> check the changes to commit
 
 
