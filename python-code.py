@@ -4,7 +4,7 @@ import boto3
 from imdb import Cinemagoer
 
 # Create an instance of the Cinemagoer class
-ia = Cinemagoer()
+instance = Cinemagoer()
 
 print("-----------------------------------------------------------------------------------------")
 
@@ -12,11 +12,11 @@ print("-------------------------------------------------------------------------
 movie_name = input("Enter the full movie name: ")
 
 # Search for the movie
-movies = ia.search_movie(movie_name)
+movies = instance.search_movie(movie_name)
 if movies:
     # Get the first movie (you can adjust this based on your requirements)
     movie_id = movies[0].movieID
-    movie_info = ia.get_movie(movie_id, info=['main'])
+    movie_info = instance.get_movie(movie_id, info=['main'])
 
     # Extract and format the names of the people involved
     def get_names(person_list):
@@ -28,10 +28,11 @@ if movies:
     print(f"Released Year: {movie_info.get('year')}")
     print(f"Genre: {movie_info.get('genre')}")
     print(f"Language: {movie_info.get('language')}")
-    print(f"Directors: {', '.join(get_names(movie_info.get('directors')))}")
-    print(f"Producer: {', '.join(get_names(movie_info.get('producer')))}")
+    print(f"Director: {', '.join(get_names(movie_info.get('directors')))}")
+    print(f"Producer(s): {', '.join(get_names(movie_info.get('producer')))}")
     print(f"Cast: {', '.join(get_names(movie_info.get('cast')[:5]))}")
     print(f"Writer(s): {', '.join(get_names(movie_info.get('writers')))}")
+    print(f"Storyline: {movie_info.get('Storyline')}")
 
 else:
     print(f"Sorry, No movie found for '{movie_name}', the given name is either incorrect nor it does not have sufficient information...")
